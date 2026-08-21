@@ -36,3 +36,5 @@ npm run build
 ```
 
 Si el entorno de ejecución no tiene Node/npm en el `PATH`, usa la terminal del proyecto donde estén disponibles esos comandos.
+
+© 2026 Skay J | All Rights Reserved.
