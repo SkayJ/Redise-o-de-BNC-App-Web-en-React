@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bnc-blue: 223 82% 15%;
+    --bnc-orange: 25 100% 50%;
+    --bnc-green: 127 73% 33%;
+    --bnc-navy: 228 55% 23%;
+    --bnc-gold: 46 63% 53%;
+
+    --background: 220 16% 96%;
+    --foreground: 223 82% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 223 82% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 82% 12%;
+    --primary: 223 82% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 25 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 14% 93%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 223 82% 95%;
+    --accent-foreground: 223 82% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 127 73% 33%;
+    --success-foreground: 0 0% 100%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 223 82% 15%;
+
+    --chart-1: 223 82% 15%;
+    --chart-2: 25 100% 50%;
+    --chart-3: 127 73% 33%;
+    --chart-4: 46 63% 53%;
+    --chart-5: 228 55% 23%;
+
+    --radius: 0.875rem;
+
+    --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 223 82% 20%;
+    --sidebar-primary: 223 82% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 95%;
+    --sidebar-accent-foreground: 223 82% 20%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 223 82% 15%;
+  }
+
+  .dark {
+    --background: 225 50% 7%;
+    --foreground: 220 20% 95%;
+    --card: 225 45% 11%;
+    --card-foreground: 220 20% 95%;
+    --popover: 225 45% 11%;
+    --popover-foreground: 220 20% 95%;
+    --primary: 228 55% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 25 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 225 40% 16%;
+    --muted-foreground: 220 15% 60%;
+    --accent: 228 55% 20%;
+    --accent-foreground: 220 20% 95%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 127 73% 40%;
+    --success-foreground: 0 0% 100%;
+    --border: 225 35% 18%;
+    --input: 225 35% 18%;
+    --ring: 228 55% 28%;
+
+    --chart-1: 228 55% 30%;
+    --chart-2: 25 100% 55%;
+    --chart-3: 127 73% 45%;
+    --chart-4: 46 63% 55%;
+    --chart-5: 223 82% 25%;
+
+    --sidebar-background: 225 50% 10%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 228 55% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 40% 16%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 225 35% 18%;
+    --sidebar-ring: 228 55% 28%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+
+@layer components {
+.bnc-card-pattern {
+  /* Forzamos el color de fondo a blanco con 0.06 de opacidad SIEMPRE */
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  
+  /* Tu logo se usa como molde de corte */
+  -webkit-mask-image: url("@/img/logo.svg");
+  mask-image: url("@/img/logo.svg");
+  
+  -webkit-mask-size: 50px 50px;
+  mask-size: 50px 50px;
+  background-repeat: repeat;
+}
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
