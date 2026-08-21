@@ -27,7 +27,7 @@ La aplicación se ejecuta con Vite y usa un store local para persistencia de cue
 
 - El flujo de login y registro es local y simulado.
 - Los cambios se almacenan en `localStorage` del navegador.
-- No se requiere ninguna dependencia externa de Base44 ni variables de entorno de plataforma.
+- No se requiere ninguna dependencia externa ni variables de entorno de plataforma.
 
 ## Verificar
 
